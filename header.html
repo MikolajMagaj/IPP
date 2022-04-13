@@ -1,0 +1,38 @@
+<div>
+    <a href="#header" id="logo"><img id="img_logo" src="img/logo.png"></a>
+    <div class="div_header">Sortuj</div>
+    <div class="div_header">Filtruj</div> 
+    <img class="svg" src="img/koszyk.svg">
+    <!-- wprowadz kod promocuyjny -->
+</div>
+<!-- <script>
+    $("#nav a:nth-of-type(2)").click(function(){
+        $("#main").load("main_page.html");
+    });
+
+    $("#nav a:nth-of-type(3)").click(function(){
+        $("#main").load("oferta.html");
+    });
+
+    $("#nav a:nth-of-type(4)").click(function(){
+        $("#main").load("cennik.html");
+    });
+    $("#nav a:nth-of-type(5)").click(function(){
+        $("#main").load("kontakt.html");
+    });
+</script> -->
+<script>
+if($(window).width() >= 100 && $(window).width() <= 480){
+    document.getElementById("img_logo").src="img/logo2.png";
+    $("#logo").before("<div id='new_cat'><img src='img/menu.png'></div>");
+    $("#new_cat").css({
+        'display' : 'inline-block',
+    });
+    $("#new_cat img").css({
+        'width' : '30px',
+        'display' : 'inline-block',
+        'margin': '20px 0 0 20px'
+    });
+  }
+
+</script>
