@@ -41,7 +41,8 @@
 #main{
     width:70%;
     margin: 0px 20%;
-    height: 1200px;
+    height:auto;
+overflow:auto;
     background-color:inherit;
     margin-bottom:10px;
 }
@@ -138,7 +139,9 @@ a#logo img{
 }
 .content img{
     margin-left:7.5%;
+    height: 66%;
     width:85%;
+    object-fit: contain;
 }
 .content p{
     text-align: center;

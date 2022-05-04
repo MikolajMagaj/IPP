@@ -1,15 +1,17 @@
-<div class="content">
-    <img src="img/wazon.png">
-    <p class="content_name">Wazon</p>
-    <p class="content_prize">49.99zł</p>
-</div>
-<div class="content">
-    <img src="img/wazon.png">
-    <p class="content_name">Wazon</p>
-    <p class="content_prize">49.99zł</p>
-</div>
-<div class="content">
-    <img src="img/wazon.png">
-    <p class="content_name">Wazon</p>
-    <p class="content_prize">49.99zł</p>
-</div>
+<script>
+    function loadContent(filter = null, sortBy = null) {
+        let main = document.getElementById("main");
+        $.getJSON('scripts/database.json', function (data) {
+            if(filter == null && sortBy == null){
+                for(let i = 0; i < data.length; i++){
+                    main.innerHTML += "<div class='content'><img src='img/" + data[i].img_url + "'><p class='content_name'>" + data[i].name + "</p><p class='content_prize'>" + data[i].price + "zł</p></div>"
+                }
+            }
+            console.log(data[0].img_url)
+            console.log(data[0].name)
+        });
+    }
+    loadContent();
+
+
+</script>
