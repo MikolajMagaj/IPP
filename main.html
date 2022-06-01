@@ -1,17 +1,122 @@
 <script>
-    function loadContent(filter = null, sortBy = null) {
+window.onload = sessionStorage.clear();
+window.onload = loadContent();
+window.onload = loadCats();
+
+    function loadContent() {
         let main = document.getElementById("main");
+        let filter = sessionStorage.getItem("filter");
+        let sortBy = sessionStorage.getItem("sortBy");
+        let category = sessionStorage.getItem("category");
+        main.innerHTML = "";
         $.getJSON('scripts/database.json', function (data) {
-            if(filter == null && sortBy == null){
+            if(filter == null && sortBy == null && category == null){
                 for(let i = 0; i < data.length; i++){
                     main.innerHTML += "<div class='content'><img src='img/" + data[i].img_url + "'><p class='content_name'>" + data[i].name + "</p><p class='content_prize'>" + data[i].price + "zł</p></div>"
                 }
             }
-            console.log(data[0].img_url)
-            console.log(data[0].name)
+            else{
+                if(category!= null){
+                    let range;
+                    if(filter!=null) range = filter.trim().split(/\s+/);
+                    let test = _.filter(data,function(data){return data.category == category;});
+                    if(sortBy == "priceup"){
+                        test = _.sortBy(test, "price"); 
+                    }
+                    else if(sortBy == "pricedown"){
+                        test = _.sortBy(test, "price").reverse(); 
+                    }
+                    else if(sortBy == "nameup"){
+                        test = _.sortBy(test, "name"); 
+                    }
+                    else if(sortBy == "namedown"){
+                        test = _.sortBy(test, "name").reverse(); 
+                    }
+                    for(let i = 0; i < test.length; i++){
+                        if(range != null){
+                            if(test[i].price >= range[0] && test[i].price <= range[1]){
+                                main.innerHTML += "<div class='content'><img src='img/" + test[i].img_url + "'><p class='content_name'>" + test[i].name + "</p><p class='content_prize'>" + test[i].price + "zł</p></div>";
+                            }
+                        }
+                        else{
+                            main.innerHTML += "<div class='content'><img src='img/" + test[i].img_url + "'><p class='content_name'>" + test[i].name + "</p><p class='content_prize'>" + test[i].price + "zł</p></div>"
+                        }
+                        
+                    }
+                }
+                else if(filter != null){
+                    let test;
+                    let range = filter.trim().split(/\s+/);
+
+                    if(sortBy == null){
+                        for(let i = 0; i < data.length; i++){
+                        if(data[i].price >= range[0] && data[i].price <= range[1]){
+                                main.innerHTML += "<div class='content'><img src='img/" + data[i].img_url + "'><p class='content_name'>" + data[i].name + "</p><p class='content_prize'>" + data[i].price + "zł</p></div>";
+                            }
+                    }
+                    }
+                    else{
+                        if(sortBy == "priceup"){
+                            test = _.sortBy(data, "price"); 
+                        }
+                        else if(sortBy == "pricedown"){
+                            test = _.sortBy(data, "price").reverse(); 
+                        }
+                        else if(sortBy == "nameup"){
+                            test = _.sortBy(data, "name"); 
+                        }
+                        else if(sortBy == "namedown"){
+                            test = _.sortBy(data, "name").reverse(); 
+                        }
+                        for(let i = 0; i < test.length; i++){
+                            if(test[i].price >= range[0] && test[i].price <= range[1]){
+                                    main.innerHTML += "<div class='content'><img src='img/" + test[i].img_url + "'><p class='content_name'>" + test[i].name + "</p><p class='content_prize'>" + test[i].price + "zł</p></div>";
+                                }
+                        }
+                  }
+                }
+                else{
+                    let test;
+                    if(sortBy == "priceup"){
+                        test = _.sortBy(data, "price"); 
+                    }
+                    else if(sortBy == "pricedown"){
+                        test = _.sortBy(data, "price").reverse(); 
+                    }
+                    else if(sortBy == "nameup"){
+                        test = _.sortBy(data, "name"); 
+                    }
+                    else if(sortBy == "namedown"){
+                        test = _.sortBy(data, "name").reverse(); 
+                    }
+                    for(let i = 0; i < test.length; i++){
+                        main.innerHTML += "<div class='content'><img src='img/" + test[i].img_url + "'><p class='content_name'>" + test[i].name + "</p><p class='content_prize'>" + test[i].price + "zł</p></div>";             
+                    }
+                }
+            }
         });
     }
-    loadContent();
 
+    
+    function loadCats() {
+        let cat = document.getElementById("cat");
+        $.getJSON('scripts/database.json', function (data) {
+            _.countBy(data, function(data) { return data.category; });
+            var cats = _.keys(_.countBy(data, function(data) { return data.category; }));
+            for(let i = 0; i < cats.length; i++){
+                 cat.innerHTML += "<p class='categories' onclick=createSession(\'category\','"+cats[i]+"');loadContent();>"+cats[i]+"</p>";
+             }
+        });
+        cat.innerHTML +="<p class='categories' onclick=sessionStorage.clear();loadContent();>Resetuj opcje</p>";
+    }
+
+    
+    function createSession(key, value){
+        sessionStorage.setItem(key, value); 
+    }
+    
+    function createSessionInput(){
+        sessionStorage.setItem("filter", document.getElementById("start").value+" "+ document.getElementById("end").value); 
+}
 
 </script>

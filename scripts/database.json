@@ -3,102 +3,102 @@
         "img_url":"wazon.png",
         "name":"Wazon",
         "price":38.99,
-        "category":"wystroj"
+        "category":"Wystrój"
     },
     {
         "img_url":"chewbacca.png",
         "name":"Figurka Chewbacca'i",
         "price":34.99,
-        "category":"starwars"
+        "category":"StarWars"
     },
     {
         "img_url":"dadba.png",
         "name":"Figurka Dadba'y",
         "price":25.99,
-        "category":"starwars"
+        "category":"StarWars"
     },
     {
         "img_url":"darth_vader.png",
         "name":"Figurka Darth'a Vader'a",
         "price":45.99,
-        "category":"starwars"
+        "category":"StarWars"
     },
     {
         "img_url":"luke_skywalker.png",
         "name":"Figurka Luke'a Skywalkera",
         "price":45.99,
-        "category":"starwars"
+        "category":"StarWars"
     },
     {
         "img_url":"storm_trooper.png",
         "name":"Figurka Stroma Troopera",
         "price":30.99,
-        "category":"starwars"
+        "category":"StarWars"
     },
     {
         "img_url":"yoda.png",
         "name":"Figurka Yoda'y",
         "price":39.99,
-        "category":"starwars"
+        "category":"StarWars"
     },
     {
         "img_url":"klipsy.png",
         "name":"Zestaw klipsów biurowych",
         "price":9.99,
-        "category":"akcesoria"
+        "category":"Akcesoria"
     },
     {
         "img_url":"kłódka.png",
         "name":"Kłódka z kluczem",
         "price":12.49,
-        "category":"bezpieczenstwo"
+        "category":"Bezpieczeństwo"
     },
     {
         "img_url":"koszula_jeans.png",
         "name":"Jeansowa koszula",
         "price":50.99,
-        "category":"odziez_gorna"
+        "category":"OdzieżGórna"
     },
     {
         "img_url":"młynek_do_kawy.png",
         "name":"Ręczny młynek do kawy",
         "price":49.00,
-        "category":"kuchnia"
+        "category":"Kuchnia"
     },
     {
         "img_url":"moździerz.png",
         "name":"Drewniany moździerz kuchenny",
         "price":30.00,
-        "category":"kuchnia"
+        "category":"Kuchnia"
     },
     {
         "img_url":"okulary.png",
         "name":"Okulary korekcyjne",
         "price":41.49,
-        "category":"akcesoria"
+        "category":"Akcesoria"
     },
     {
         "img_url":"szampon.png",
         "name":"Szampon o zapachu pomarańczy",
         "price":7.29,
-        "category":"lazienka"
+        "category":"Łazienka"
     },
     {
         "img_url":"zastawa.png",
         "name":"Zastawa stołowa",
         "price":78.15,
-        "category":"kuchnia"
+        "category":"Kuchnia"
     },
     {
         "img_url":"zegarwahadłowy.png",
         "name":"Zegar wahadłowy",
         "price":95.00,
-        "category":"wystroj"
+        "category":"Wystrój"
     },
     {
         "img_url":"zestaw_kredek.png",
         "name":"Zestaw kredek",
         "price":12.50,
-        "category":"zabawki"
+        "category":"Zabawki"
     }
 ]
