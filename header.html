@@ -1,55 +1,78 @@
 <div>
-    <a href="#header" id="logo"><img id="img_logo" src="img/logo.png"></a>
-    <div class="div_header" onclick="show('sort_click','filtr_click')">Sortuj</div>
-    <div class="div_header" onclick="show('filtr_click','sort_click')">Filtruj</div> 
-    <img class="svg" src="img/koszyk.svg">
-    <div id="sort_click">
-        <div class="sort_div" onclick="addcheck(this); createSession('sortBy','priceup'); loadContent();"><p class="sort_p">cena rosnąco</p><i class='fa-solid fa-check click_icon'></i></div>
-        <div class="sort_div" onclick="addcheck(this); createSession('sortBy','pricedown'); loadContent();"><p class="sort_p">cena malejąco</p><i class='fa-solid fa-check click_icon'></i></div>
-        <div class="sort_div" onclick="addcheck(this); createSession('sortBy','nameup'); loadContent();"><p class="sort_p">nazwa rosnąco</p><i class='fa-solid fa-check click_icon'></i></div>
-        <div class="sort_div" onclick="addcheck(this); createSession('sortBy','namedown'); loadContent();"><p class="sort_p">nazwa malejąco</p><i class='fa-solid fa-check click_icon'></i></div>
+  <a href="#header" id="logo"><img id="img_logo" src="img/logo.png"></a>
+  <div class="div_header">Sortuj</div>
+  <div class="div_header">Filtruj</div>
+  <img class="svg" src="img/koszyk.svg">
+  <div id="sort_click" style="display:none">
+    <div class="sort_div"
+      onclick="addcheck(this); createSession('sortBy','priceup'); loadContent(); hide('sort_click')">
+      <p class="sort_p">cena rosnąco</p><i class='fa-solid fa-check click_icon'></i>
     </div>
-    <div id="filtr_click">
-      <form>
-        <label for="od">Od:</label>
-        <input type="text" id="start" name="start" value="0">
-        <label for="do">Do:</label>
-        <input type="text" id="end" name="end" value="100"><br>
-        <input type="button" value="Filtruj" onclick="createSessionInput(); loadContent();">
-      </form> 
+    <div class="sort_div"
+      onclick="addcheck(this); createSession('sortBy','pricedown'); loadContent(); hide('sort_click')">
+      <p class="sort_p">cena malejąco</p><i class='fa-solid fa-check click_icon'></i>
     </div>
-    <!-- wprowadz kod promocuyjny -->
+    <div class="sort_div" onclick="addcheck(this); createSession('sortBy','nameup'); loadContent(); hide('sort_click')">
+      <p class="sort_p">nazwa rosnąco</p><i class='fa-solid fa-check click_icon'></i>
+    </div>
+    <div class="sort_div"
+      onclick="addcheck(this); createSession('sortBy','namedown'); loadContent(); hide('sort_click')">
+      <p class="sort_p">nazwa malejąco</p><i class='fa-solid fa-check click_icon'></i>
+    </div>
+  </div>
+  <div id="filtr_click" style="display:none">
+    <form>
+      <label for="od">Od:</label>
+      <input type="text" id="start" name="start" value="0">
+      <label for="do">Do:</label>
+      <input type="text" id="end" name="end" value="100"><br>
+      <input type="button" value="Filtruj" onclick="createSessionInput(); loadContent();  hide('filtr_click')">
+    </form>
+  </div>
 </div>
 <script>
-if($(window).width() >= 100 && $(window).width() <= 480){
-    document.getElementById("img_logo").src="img/logo2.png";
+  if (window.innerWidth >= 100 && window.innerWidth <= 480) {
+    document.getElementById("img_logo").src = "img/logo2.png";
     $("#logo").before("<div id='new_cat'><img src='img/menu.png'></div>");
+    document.getElementById("new_cat").addEventListener('click', () => {
+      show('cat', 'sort_click', 'filtr_click');
+    });
+    document.getElementById("cat").style.display = "none";
     $("#new_cat").css({
-        'display' : 'inline-block',
+      'display': 'inline-block',
+      'cursor': 'pointer'
     });
     $("#new_cat img").css({
-        'width' : '30px',
-        'display' : 'inline-block',
-        'margin': '20px 0 0 20px'
+      'width': '30px',
+      'display': 'inline-block',
+      'margin': '20px 0 0 20px'
+    });
+
+  }
+  if (window.innerWidth > 768) {
+    var clicks = document.getElementsByClassName("div_header");
+    clicks[0].addEventListener('click', () => {
+      show('sort_click', 'filtr_click');
+    });
+    clicks[1].addEventListener('click', () => {
+      show('filtr_click', 'sort_click');
+    });
+  }
+  else if ($(window).width() <= 768) {
+    var clicks = document.getElementsByClassName("div_header");
+    clicks[0].addEventListener('click', () => {
+      show('sort_click', 'filtr_click', 'cat');
+    });
+    clicks[1].addEventListener('click', () => {
+      show('filtr_click', 'sort_click', 'cat');
     });
   }
 
-function show(click, declick) {
-  var x = document.getElementById(click);
-  var y = document.getElementById(declick);
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-    y.style.display = "none";
-  } else {
-    x.style.display = "none";
-  }
-}
+  
 
+  
 
-function addcheck(elem){
-  $(".sort_div").children().next().css("color","transparent");
-  $(elem).children().next().css("color","inherit");
-}
+  
 
-
+  
 </script>

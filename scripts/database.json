@@ -57,7 +57,7 @@
         "img_url":"koszula_jeans.png",
         "name":"Jeansowa koszula",
         "price":50.99,
-        "category":"OdzieżGórna"
+        "category":"Odzież-męska"
     },
     {
         "img_url":"młynek_do_kawy.png",
@@ -100,5 +100,227 @@
         "name":"Zestaw kredek",
         "price":12.50,
         "category":"Zabawki"
+    },
+    {
+        "img_url":"koszula_biała_m.png",
+        "name":"Koszula biała męska",
+        "price":69.99,
+        "category":"Odzież-męska"
+    },
+    {
+        "img_url":"kaktus_czer.png",
+        "name":"Czerwony kaktus",
+        "price":10.50,
+        "category":"Wystrój"
+    },
+    {
+        "img_url":"kaktus_pom.png",
+        "name":"Pomarańczowy kaktus",
+        "price":10.50,
+        "category":"Wystrój"
+    },
+    {
+        "img_url":"swiecznik.png",
+        "name":"Srebrny świecznik",
+        "price":24.99,
+        "category":"Wystrój"
+    },
+    {
+        "img_url":"wazon2.png",
+        "name":"Biały okrągły wazon",
+        "price":29.99,
+        "category":"Wystrój"
+    },
+    {
+        "img_url":"zestaw_zdjec.png",
+        "name":"Zestaw trzech zdjęć",
+        "price":40.00,
+        "category":"Wystrój"
+    },
+    {
+        "img_url":"kaktus_zol.png",
+        "name":"Żółty kaktus",
+        "price":10.50,
+        "category":"Wystrój"
+    },
+    {
+        "img_url":"kaktus_roz.png",
+        "name":"Różowy kaktus",
+        "price":10.50,
+        "category":"Wystrój"
+    },
+    {
+        "img_url":"kaktus_ziel.png",
+        "name":"Zielony kaktus",
+        "price":10.50,
+        "category":"Wystrój"
+    },
+    {
+        "img_url":"kaktus_prem.png",
+        "name":"Wyjątkowy kaktus",
+        "price":22.99,
+        "category":"Wystrój"
+    },
+    {
+        "img_url":"komplet_szklany.png",
+        "name":"Komplet kolorowych szkieł",
+        "price":55.55,
+        "category":"Wystrój"
+    },
+    {
+        "img_url":"najlepszy_tata_koszulka.png",
+        "name":"Koszulka dla najlepszego taty",
+        "price":39.99,
+        "category":"Odzież-męska"
+    },
+    {
+        "img_url":"koszula_m_bez.png",
+        "name":"Beżowa koszula letnia męska",
+        "price":79.99,
+        "category":"Odzież-męska"
+    },
+    {
+        "img_url":"czarna_bluza_m.png",
+        "name":"Czarna bluza męska",
+        "price":65.00,
+        "category":"Odzież-męska"
+    },
+    {
+        "img_url":"czarne_polo_m.png",
+        "name":"Czarne polo męskie",
+        "price":45.00,
+        "category":"Odzież-męska"
+    },
+    {
+        "img_url":"bluza_rozp_m.png",
+        "name":"Czarna rozpinana bluza męska",
+        "price":68.00,
+        "category":"Odzież-męska"
+    },
+    {
+        "img_url":"koszulka_polizei.png",
+        "name":"Koszulka policyjna męska",
+        "price":150.00,
+        "category":"Odzież-męska"
+    },
+    {
+        "img_url":"czarna_nike_m.png",
+        "name":"Czarna bluza nike męska",
+        "price":59.29,
+        "category":"Odzież-męska"
+    },
+    {
+        "img_url":"zolty_ortalion.png",
+        "name":"Żółty bluza adidas męska",
+        "price":110.00,
+        "category":"Odzież-męska"
+    },
+    {
+        "img_url":"koszulka_m_zielona.png",
+        "name":"Zielony T-shirt męski",
+        "price":35.00,
+        "category":"Odzież-męska"
+    },
+    {
+        "img_url":"czarny_ortalion.png",
+        "name":"Dresowy zestaw czarny męski",
+        "price":199.00,
+        "category":"Odzież-męska"
+    },
+    {
+        "img_url":"tommy_niebieski.png",
+        "name":"T-shirt Tommy niebieski męski",
+        "price":89.99,
+        "category":"Odzież-męska"
+    },
+    {
+        "img_url":"szara_bluza_m.png",
+        "name":"Szara bluza męska",
+        "price":78.88,
+        "category":"Odzież-męska"
+    },
+    {
+        "img_url":"db_m_koszulka.png",
+        "name":"DragonBall dla taty",
+        "price":49.99,
+        "category":"Odzież-męska"
+    },
+    {
+        "img_url":"sukienka_roz.png",
+        "name":"Różowa sukienka",
+        "price":83.15,
+        "category":"Odzież-damska"
+    },
+    {
+        "img_url":"sukienka_ziel.png",
+        "name":"Zielona sukienka",
+        "price":67.10,
+        "category":"Odzież-damska"
+    },
+    {
+        "img_url":"kurtka_damska.png",
+        "name":"Zimowa granatowa kurtka damska",
+        "price":199.99,
+        "category":"Odzież-damska"
+    },
+    {
+        "img_url":"kurtka_d_jeans.png",
+        "name":"Dżinsowa kurtka damska",
+        "price":119.00,
+        "category":"Odzież-damska"
+    },
+    {
+        "img_url":"sukienka_marmur.png",
+        "name":"Marmurowa sukienka",
+        "price":50.99,
+        "category":"Odzież-damska"
+    },
+    {
+        "img_url":"sukienka_kwiatki.png",
+        "name":"Sukienka w kwiatki",
+        "price":49.99,
+        "category":"Odzież-damska"
+    },
+    {
+        "img_url":"bluzka_d_roses.png",
+        "name":"Bluzka róże damska",
+        "price":29.50,
+        "category":"Odzież-damska"
+    },
+    {
+        "img_url":"bluzka_czarna_serce.png",
+        "name":"Czarna bluzka ze wzorkiem",
+        "price":19.99,
+        "category":"Odzież-damska"
+    },
+    {
+        "img_url":"komplet_bluzek_d.png",
+        "name":"Komplet trzech koszulek damskich",
+        "price":40.00,
+        "category":"Odzież-damska"
+    },
+    {
+        "img_url":"dres_komplet_d.png",
+        "name":"Beżowy komplet dresowy damski",
+        "price":149.99,
+        "category":"Odzież-damska"
+    },
+    {
+        "img_url":"marynarka_ziel.png",
+        "name":"Zielona marynarka damska",
+        "price":121.21,
+        "category":"Odzież-damska"
+    },
+    {
+        "img_url":"bluzka_nieb_d.png",
+        "name":"Niebieska bluzka damska",
+        "price":22.51,
+        "category":"Odzież-damska"
+    },
+    {
+        "img_url":"bluzka_biala_d.png",
+        "name":"Biała bluzka damska",
+        "price":22.51,
+        "category":"Odzież-damska"
     }
 ]
